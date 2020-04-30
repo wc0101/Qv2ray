@@ -44,7 +44,7 @@ if(MSVC)
         set(CPACK_NSIS_DISPLAY_NAME "Qv2ray")
         set(CPACK_NSIS_PACKAGE_NAME "Qv2ray")
         set(CPACK_NSIS_EXTRA_PREINSTALL_COMMANDS "
-            StrCpy $0 "qv2ray.exe"
+            StrCpy $0 \"qv2ray.exe\"
             KillProc::KillProcesses
         ")
         set(CPACK_NSIS_EXTRA_INSTALL_COMMANDS "
@@ -58,7 +58,7 @@ if(MSVC)
             WriteRegStr HKLM \\\"Software\\\\Microsoft\\\\Windows\\\\CurrentVersion\\\\Uninstall\\\\qv2ray\\\" \\\"URLInfoAbout\\\" \\\"https://github.com/Qv2ray/Qv2ray\\\"
         ")
         set(CPACK_NSIS_EXTRA_UNINSTALL_COMMANDS "
-            StrCpy $0 "qv2ray.exe"
+            StrCpy $0 \"qv2ray.exe\"
             KillProc::KillProcesses
             Delete \\\"$DESKTOP\\\\Qv2ray.lnk\\\"
             Delete \\\"$SMPROGRAMS\\\\$STARTMENU_FOLDER\\\\Qv2ray\\\\Qv2ray.lnk\\\"
